@@ -13,7 +13,7 @@ struct {
     __uint(max_entries, 1);
 } packet_count_map SEC(".maps"); 
 
-SEC("filter")
+SEC("socket")
 int packet_count(struct __sk_buff *skb) {
     //initial key
     __u32 key = 0;
